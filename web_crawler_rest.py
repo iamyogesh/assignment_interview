@@ -6,12 +6,11 @@
 #http://0.0.0.0:5000/2
 
 
-from bs4 import BeautifulSoup
 import requests
 import re
 import sys
 import json
-print sys.argv
+from bs4 import BeautifulSoup
 from flask_restful import Api
 from flask import Blueprint
 from flask_restful import Resource, Api
@@ -72,4 +71,4 @@ api.add_resource(UrlPoller, '/<int:depth>')
 
 
 if __name__ == '__main__':
-	app.run(host='0.0.0.0',debug=True)
+	app.run(host='0.0.0.0')
